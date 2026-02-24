@@ -89,8 +89,13 @@ h1 {
     image-rendering: pixelated; /* SHARP PIXELS */
     margin-bottom: 10px;
 }
-
-.specimen p { font-size: 0.75rem; margin: 0; opacity: 0.8; }
+.specimen p { 
+    font-size: 0.75rem; 
+    margin: 0; 
+    color: var(--accent-color); /* This makes it the technical yellow/green */
+    text-transform: uppercase;   /* Makes it look more like a computer readout */
+    letter-spacing: 1px;
+}
 
 /* BUTTONS / HUB */
 .hub-links { margin: 20px 0; display: flex; gap: 15px; flex-wrap: wrap; }
@@ -120,4 +125,5 @@ h2 { font-size: 1.2rem; border-bottom: 2px solid var(--text-color); display: inl
     .terminal-container { padding: 20px; }
     h1 { font-size: 1.2rem; }
 }
+
 
