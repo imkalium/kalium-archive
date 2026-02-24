@@ -1,0 +1,34 @@
+/* THE STEAM LORDS PALETTE */
+:root {
+    --bg-color: #C0D1CC;
+    --text-color: #170E19;
+    --accent-color: #A19F7C;
+}
+
+body {
+    background-color: var(--bg-color);
+    /* THE PERFECT DOT GRID */
+    background-image: radial-gradient(#A8BCB7 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace; /* Placeholder for Space Mono */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.terminal-container {
+    max-width: 800px;
+    border: 2px solid var(--text-color);
+    padding: 40px;
+    background-color: rgba(192, 209, 204, 0.9); /* Slight transparency */
+}
+
+img {
+    image-rendering: pixelated; /* THE PIXEL ART FIX */
+    max-width: 100%;
+    border: 1px solid var(--text-color);
+}
+
+h1, h2 { background-color: var(--text-color); color: var(--bg-color); padding: 5px 10px; display: inline-block; }
