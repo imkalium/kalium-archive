@@ -1,16 +1,16 @@
-/* STEAM LORDS COLOR PALETTE */
+/* STEAM LORDS COLOR PALETTE - CLINICAL SPECIFICATION */
 :root {
-    --bg-color: #C0D1CC;      /* Base Teal */
-    --text-color: #170E19;    /* Dark Purple/Black */
-    --accent-color: #A19F7C;  /* Action Yellow */
-    --grid-color: #A8BCB7;    /* Subtle Grid Dot */
+    --bg-color: #C0D1CC;      /* Base Teal (Medical Equipment) */
+    --text-color: #170E19;    /* Dark Purple (High Contrast) */
+    --accent-color: #A19F7C;  /* Technical Gold (Active Data) */
+    --grid-color: #A8BCB7;    /* Subtle Grid (Scope Mesh) */
 }
 
 * { box-sizing: border-box; }
 
 body {
     background-color: var(--bg-color);
-    /* MATHEMATICALLY PERFECT GRID */
+    /* THE PERFECT DOT GRID - NO BLUR */
     background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
     background-size: 32px 32px;
     color: var(--text-color);
@@ -28,13 +28,18 @@ body {
     background-color: var(--bg-color);
     border: 2px solid var(--text-color);
     padding: 40px;
-    box-shadow: 12px 12px 0px var(--text-color);
+    box-shadow: 12px 12px 0px var(--text-color); /* Brutalist offset shadow */
 }
 
-/* HEADER & LOGO */
+/* HEADER & LOGO CALIBRATION */
 header { text-align: left; margin-bottom: 30px; }
-.logo-node { margin-bottom: 20px; }
-.site-logo { width: 80px; height: auto; image-rendering: pixelated; }
+.logo-node { margin-bottom: 25px; }
+.site-logo { 
+    width: 100px; /* ENHANCED PRESENCE */
+    height: auto; 
+    image-rendering: pixelated; /* CRITICAL FOR ARTISTS */
+    border: none;
+}
 
 h1 { 
     background-color: var(--text-color); 
@@ -45,7 +50,11 @@ h1 {
     margin-bottom: 10px;
 }
 
-.meta-data p { margin: 5px 0; font-size: 0.9rem; }
+.meta-data p { 
+    margin: 5px 0; 
+    font-size: 0.85rem; 
+    text-transform: uppercase;
+}
 
 /* 8x8 PIXEL DIVIDER REPLICATION */
 .pixel-divider {
@@ -68,7 +77,7 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* GALLERY GRID */
+/* GALLERY GRID: SPECIMEN VIEW */
 .specimen-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -80,30 +89,40 @@ h1 {
     border: 1px solid var(--text-color);
     padding: 15px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(161, 159, 124, 0.05); /* Very subtle accent tint */
+    transition: 0.3s ease;
+}
+
+.specimen:hover {
+    box-shadow: 6px 6px 0px var(--text-color);
+    transform: translate(-3px, -3px);
 }
 
 .specimen img {
     max-width: 100%;
     height: auto;
-    image-rendering: pixelated; /* SHARP PIXELS */
-    margin-bottom: 10px;
+    image-rendering: pixelated; 
+    margin-bottom: 15px;
+    border: 1px solid var(--text-color);
 }
+
+/* THE "TECHNICAL" TEXT UPGRADE */
 .specimen p { 
     font-size: 0.75rem; 
     margin: 0; 
-    color: var(--accent-color); /* This makes it the technical yellow/green */
-    text-transform: uppercase;   /* Makes it look more like a computer readout */
-    letter-spacing: 1px;
+    color: var(--accent-color); /* HIGHLIGHT COLOR */
+    text-transform: uppercase; 
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 
-/* BUTTONS / HUB */
+/* BUTTONS / ACCESS HUB */
 .hub-links { margin: 20px 0; display: flex; gap: 15px; flex-wrap: wrap; }
 .btn {
     text-decoration: none;
     background-color: var(--accent-color);
     color: var(--text-color);
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: 2px solid var(--text-color);
     font-weight: bold;
     font-size: 0.9rem;
@@ -112,18 +131,30 @@ h1 {
 
 .btn:hover {
     background-color: var(--text-color);
-    color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 4px 4px 0px var(--accent-color);
 }
 
-.footer-msg { font-size: 0.7rem; margin-top: 30px; opacity: 0.6; }
+.footer-msg { 
+    font-size: 0.7rem; 
+    margin-top: 40px; 
+    opacity: 0.7; 
+    border-top: 1px solid var(--text-color);
+    padding-top: 10px;
+}
 
 /* TITLES */
-h2 { font-size: 1.2rem; border-bottom: 2px solid var(--text-color); display: inline-block; margin-bottom: 15px; }
-
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 600px) {
-    .terminal-container { padding: 20px; }
-    h1 { font-size: 1.2rem; }
+h2 { 
+    font-size: 1.1rem; 
+    background-color: var(--text-color); 
+    color: var(--bg-color);
+    padding: 2px 8px;
+    margin-bottom: 15px; 
 }
 
-
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    .terminal-container { padding: 20px; }
+    h1 { font-size: 1.1rem; }
+    .specimen-grid { grid-template-columns: 1fr; }
+}
